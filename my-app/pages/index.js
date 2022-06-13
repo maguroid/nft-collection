@@ -173,11 +173,11 @@ export default function Home() {
             clearInterval(presaleEndedInterval);
           }
         }
+      }, 5 * 1000);
 
-        setInterval(async function () {
-          await getTokenIdsMinted();
-        }, 5 * 1000);
-      });
+      setInterval(async function () {
+        await getTokenIdsMinted();
+      }, 5 * 1000);
     }
   }, [walletConnected]);
 
